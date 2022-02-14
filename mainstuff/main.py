@@ -7,8 +7,9 @@ variable - holds a statement to be used again.
 input - a built in function that takes user statements and utilizes them in the code.
 """
 #imports the time module that can tell the computer to wait before doing the next task.
+
 import time
-import common
+from commonv import PLAYER
 #Start Game function to initiate the story
 def StartGame():
     #           Asks for the input of the user
@@ -34,4 +35,7 @@ def Scroll():
 #A function to get the nickname of the character
 def Nickname():
     nickname = input("Before we start your adventure what is your name")
-    
+    PLAYER ["playername"] = nickname
+    print(PLAYER ["playername"])
+
+Nickname()
