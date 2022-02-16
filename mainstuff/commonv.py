@@ -1,3 +1,5 @@
 PLAYER = {
-    "Playername" : "Default"
+    "Playername" : "Default",
+
+    "PlayerHealth" : 25 
 }
