@@ -12,7 +12,7 @@ from commonv import PLAYER
 #Start Game function to initiate the story
 def StartGame():
     #           Asks for the input of the user
-    startgame = input("Start your adventure?    [y/n]\n")
+    startgame = input("Start your adventure?    [y/n]           ")
     if startgame == 'y' or 'yes':
         Nickname()
 
@@ -26,6 +26,11 @@ def SleepRoom():
     print("WAKE UP YOU LAZY BUM")
     time.sleep(1)
     print("\n")
+    time.sleep(1)
+    print("*groan*")
+    time.sleep(2)
+    print("WAKE UP")
+    print("Thump...")
 
 
     
@@ -65,7 +70,7 @@ def Nickname():
     #Prints the gained user input
     print("So your name is", PLAYER ["playername"])
     #Gets user input to confirm
-    confirm = input()
+    confirm = input("[y/n]          ")
     #If elif else conditional that continues on in a certain
     # way depending on the user input.
     if confirm == 'y' or 'yes':
