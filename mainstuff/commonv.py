@@ -3,3 +3,7 @@ PLAYER = {
 
     "PlayerHealth" : 25 
 }
+
+INVENTORY = {
+    "NotBible" : False
+}
