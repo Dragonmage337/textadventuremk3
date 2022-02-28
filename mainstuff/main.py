@@ -8,6 +8,7 @@ input - a built in function that takes user statements and utilizes them in the 
 """
 #imports the time module that can tell the computer to wait before doing the next task.
 import time
+import random
 from commonv import PLAYER
 from commonv import INVENTORY
 #Start Game function to initiate the story
@@ -15,9 +16,8 @@ from commonv import INVENTORY
 def StartGame():
     #           Asks for the input of the user
     startgame = input("Start your adventure?    [y/n]           ")
-    if startgame == 'y' or 'yes':
+    if startgame == 'y':
         Nickname()
-
     else:
         print("Too bad.")
         Nickname()
@@ -35,14 +35,14 @@ def SleepRoom():
     print("Thump...")
     print("You climb out of the bed and stand in the middle of your room.")
     leave = input("Do you leave your home or just sit here and wait?")
-    if leave == 'y' or 'yes' or 'leave':
+    if leave == 'y'or 'leave':
         LeaveRoom()
     elif leave == 'n' or 'wait' or 'no':
         print("Ok then.")
         Scroll()
         print("You sat there and waited. Your boss calls you from work and screams '' You're FIRED''")
         time.sleep(1)
-        print("Congratulations! You got fired from your job and became useless from society! Ending 1 out of 5")
+        print("Congratulations! You got fired from your job and became useless to society! Ending 1 out of 5")
         StartGame()
    
 def LeaveRoom():
@@ -50,6 +50,31 @@ def LeaveRoom():
     Scroll()
     print("But you come to some obstructions in your path.")
     Scroll()
+    rando = random.randrange(1,10)
+    if rando > 3:
+        Obstruction1()
+    elif rando < 3 & rando > 7:
+        Obstruction2
+
+def Obstruction1():
+    print("You have been locked into an unending ad!")
+    time.sleep(10)
+    while True:
+        print("Have you heard of Raid Shadow Legends!?!???!")
+        print("Ending 2 out of 5")
+
+def Obstruction2():
+    print("You come across an annoying person in the street who won't stop talking.")
+    Scroll()
+    print("You have sat here for hours...")
+    Scroll()
+    print("And they just keep on talking...")
+    Scroll()
+    print("Ending 3 out of 5")
+    StartGame()
+
+def Obstruction3():
+    print("")
 
 
 #A function to scroll the screen down.
