@@ -12,7 +12,7 @@ import time
 import random
 from commonv import PLAYER
 from commonv import INVENTORY
-from mainstuff.commonv import TIMESPLAYED
+from commonv import TIMESPLAYED
 #Start Game function to initiate the story
 
 def StartGame():
@@ -50,7 +50,7 @@ def SleepRoom():
         INVENTORY ["NotBible"] == True
         print(INVENTORY ["NotBible"])
         time.sleep(1)
-        print("Congratulations! You got fired from your job and became useless to society! Ending 1 out of 5")
+        print("Congratulations! You got fired from your job and became useless to society! Ending 1 out of 4")
         StartGame()
    
 def LeaveRoom():
@@ -61,15 +61,17 @@ def LeaveRoom():
     rando = random.randrange(1,10)
     if rando > 3:
         Obstruction1()
-    elif rando < 3 & rando > 7:
+    elif rando < 3:
         Obstruction2
+    elif rando == 10:
+        Obstruction3()
 
 def Obstruction1():
     print("You have been locked into an unending ad!")
     time.sleep(10)
     while True:
         print("Have you heard of Raid Shadow Legends!?!???!")
-        print("Ending 2 out of 5")
+        print("Ending 2 out of 4")
 
 def Obstruction2():
     print("You come across an annoying person in the street who won't stop talking.")
@@ -78,11 +80,17 @@ def Obstruction2():
     Scroll()
     print("And they just keep on talking...")
     Scroll()
-    print("Ending 3 out of 5")
+    print("Ending 3 out of 4")
     StartGame()
 
 def Obstruction3():
-    print("")
+    print("You come across nothing. Its oddly silent. Weird. You continue onto"
+    " work like nothing happened and you don't get fired.")
+    time.sleep(1)
+    print("Ending 4 out of 4")
+    time.sleep(2)
+    print("SIKE")
+    Obstruction1()
 
 
 #A function to scroll the screen down.
