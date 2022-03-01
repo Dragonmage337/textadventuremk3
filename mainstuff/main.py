@@ -7,10 +7,12 @@ variable - holds a statement to be used again.
 input - a built in function that takes user statements and utilizes them in the code.
 """
 #imports the time module that can tell the computer to wait before doing the next task.
+from operator import invert
 import time
 import random
 from commonv import PLAYER
 from commonv import INVENTORY
+from mainstuff.commonv import TIMESPLAYED
 #Start Game function to initiate the story
 
 def StartGame():
@@ -18,9 +20,11 @@ def StartGame():
     startgame = input("Start your adventure?    [y/n]           ")
     if startgame == 'y':
         Nickname()
+        TIMESPLAYED ["amountplayed"] = TIMESPLAYED ["amountplayed"] + 1
     else:
         print("Too bad.")
         Nickname()
+        TIMESPLAYED ["amountplayed"] = TIMESPLAYED ["amountplayed"] + 1
 
 #Intro Scene of the adventure
 def SleepRoom():
@@ -35,12 +39,16 @@ def SleepRoom():
     print("Thump...")
     print("You climb out of the bed and stand in the middle of your room.")
     leave = input("Do you leave your home or just sit here and wait?")
-    if leave == 'y'or 'leave':
+    if leave.lower() == 'y' or leave.lower() == 'leave':
         LeaveRoom()
-    elif leave == 'n' or 'wait' or 'no':
+    elif leave.lower() == 'n' or leave.lower() == 'wait' or leave.lower() == 'no':
         print("Ok then.")
         Scroll()
         print("You sat there and waited. Your boss calls you from work and screams '' You're FIRED''")
+        time.sleep(1)
+        print("But, on the bright side, you found your old NotBible!!!")
+        INVENTORY ["NotBible"] == True
+        print(INVENTORY ["NotBible"])
         time.sleep(1)
         print("Congratulations! You got fired from your job and became useless to society! Ending 1 out of 5")
         StartGame()
@@ -116,10 +124,10 @@ def Nickname():
     confirm = input("[y/n]          ")
     #If elif else conditional that continues on in a certain
     # way depending on the user input.
-    if confirm == 'y' or 'yes':
+    if confirm.lower() == 'y' or confirm.lower() == 'yes':
         print("Ok, let's continue.")
         SleepRoom()
-    elif confirm == 'n' or 'no':
+    elif confirm.lower() == 'n' or confirm.lower() == 'no':
         Nickname()
     else:
         print("I don't understand what that means...")

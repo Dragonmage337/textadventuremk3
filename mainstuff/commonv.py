@@ -7,3 +7,7 @@ PLAYER = {
 INVENTORY = {
     "NotBible" : False
 }
+
+TIMESPLAYED = {
+    "amountplayed" : 0
+}
