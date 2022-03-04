@@ -5,9 +5,12 @@
 variable - holds a statement to be used again.
 
 input - a built in function that takes user statements and utilizes them in the code.
+
+if, elif, else - a way to tell the computer to do something if the condition is met.
+
+print - print text to the terminal or as output.
 """
 #imports the time module that can tell the computer to wait before doing the next task.
-from operator import invert
 import time
 import random
 from commonv import PLAYER
@@ -28,9 +31,11 @@ def StartGame():
 
 #Intro Scene of the adventure
 def SleepRoom():
+    #runs the scroll function.
     Scroll()
     print("WAKE UP YOU LAZY BUM")
     time.sleep(1)
+    #Tells the computer to print to a new line.
     print("\n")
     time.sleep(1)
     print("*groan*")
@@ -39,6 +44,7 @@ def SleepRoom():
     print("Thump...")
     print("You climb out of the bed and stand in the middle of your room.")
     leave = input("Do you leave your home or just sit here and wait?")
+    #If else conditional to continue the story and edit a dictionary key.
     if leave.lower() == 'y' or leave.lower() == 'leave':
         LeaveRoom()
     elif leave.lower() == 'n' or leave.lower() == 'wait' or leave.lower() == 'no':
@@ -52,7 +58,7 @@ def SleepRoom():
         time.sleep(1)
         print("Congratulations! You got fired from your job and became useless to society! Ending 1 out of 4")
         StartGame()
-   
+#Chooses a random number and runs a function depending on that number.
 def LeaveRoom():
     print("You leave your room and sprint to work as you realize that you are late.")
     Scroll()
