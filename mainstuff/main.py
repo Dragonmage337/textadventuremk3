@@ -5,6 +5,15 @@
 variable - holds a statement to be used again.
 
 input - a built in function that takes user statements and utilizes them in the code.
+
+
+Sundiata 
+
+TextAdventureMkIII
+main 
+common
+
+Runs a text adventure for the user.
 """
 #imports the time module that can tell the computer to wait before doing the next task.
 from operator import invert
