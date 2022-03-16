@@ -6,7 +6,6 @@ variable - holds a statement to be used again.
 
 input - a built in function that takes user statements and utilizes them in the code.
 
-<<<<<<< HEAD
 
 Sundiata 
 
@@ -15,11 +14,6 @@ main
 common
 
 Runs a text adventure for the user.
-=======
-if, elif, else - a way to tell the computer to do something if the condition is met.
-
-print - print text to the terminal or as output.
->>>>>>> 665178ffa0644528db9fee20b7fa8d0958b4acb9
 """
 #imports the time module that can tell the computer to wait before doing the next task.
 import time
