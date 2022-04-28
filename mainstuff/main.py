@@ -150,5 +150,6 @@ def Nickname():
         Nickname()
     else:
         print("I don't understand what that means...")
+        Nickname()
 
 StartGame()
